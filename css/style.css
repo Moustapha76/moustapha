@@ -2,12 +2,14 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 :root {
     --primary: #e9e9e9;
-    --secondary: #1f1d1d;
+    --secondary: #1f1d1d59;
     --tertiary: #F4FF00;
     --dark: #000;
     --light: #ffffff54;
-    --font: 'Barlow';
-    --font_body: 'Noto Sans';
+    --font:
+    'Barlow';
+    --font_body:
+    'Noto Sans';
 }
 
 * {
@@ -15,6 +17,18 @@
     padding: 0%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #1f1d1d59;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: var(--primary);
+    letter-spacing: 2px;
 }
 
 section#education .item:hover p.description {
@@ -30,6 +44,111 @@ section#education {
 
 main section {
     padding: 5% 5%;
+}
+
+section#contact .container {
+    display: flex;
+    gap: 40px;
+    padding: 4% 0;
+}
+
+section#contact .container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 50%;
+}
+
+form input, form textarea {
+    background: transparent;
+    padding: 10px 20px 20px 12px;
+    width: 100%;
+    border: 1px solid #ffffff24;
+    font-size: 20px;
+    font-family: var(--font);
+}
+
+input.submit {
+    color: var(--primary);
+    background: var(--secondary);
+    border: none;
+    /* width: auto; */
+    padding: 18px 32px;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+input.submit:hover {
+    background: var(--tertiary);
+    color: var(--dark);
+    font-weight: bold;
+}
+
+section#contact .container .infos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: var(--secondary);
+    padding: 40px;
+}
+
+section#contact .container .infos h3 {
+    font-size: 40px;
+}
+
+section#contact .container .infos .head p {
+    font-size: 20px;
+    font-family: var(--font);
+    color: var(--light);
+}
+
+section#contact .container .infos p i {
+    font-size: 18px;
+    color: var(--tertiary);
+    padding-right: 6px;
+}
+
+section#contact .container .infos p {
+    font-size: 16px;
+}
+
+section#hobbies .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+section#hobbies .container .item {
+    padding: 20px 40px;
+    transition: all .3s linear;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 18px;
+    height: 100px;
+    font-family: var(--font);
+}
+
+section#hobbies .container .item i {
+    font-size: 50px;
+    color: var(--tertiary);
+}
+
+section#hobbies .container .item:hover {
+    background: var(--tertiary);
+    color: var(--dark);
+    font-weight: 900;
+    font-size: 25px;
+}
+
+section#hobbies .container .item:hover i {
+    color: var(--dark);
 }
 
 section#skills {}
@@ -54,6 +173,7 @@ section#skills .container h2 {
     letter-spacing: 0px;
     padding: 20px 0;
     display: block;
+    text-align: center;
 }
 
 section#skills .container span {padding: 12px 0;font-family: var(--font);}
@@ -73,8 +193,30 @@ section#skills .container span.level:after {
     right: 0;
     top: -38px;
 }
-
-span.level.level-1 {}
+/* html & css */
+section#skills .container .technical-skills span.level.level-1:before{width: 90%;}
+section#skills .container .technical-skills span.level.level-1::after{content: '90%';}
+/* Professional-skills */
+section#skills .container .professional-skills span.level:before{width: 80%;}
+section#skills .container .professional-skills span.level::after{content: '80%';}
+/* javascript */
+section#skills .container .technical-skills span.level.level-2:before{width: 60%;}
+section#skills .container .technical-skills span.level.level-2::after{content: '60%';}
+/* Jquery */
+section#skills .container .technical-skills span.level.level-3:before{width: 60%;}
+section#skills .container .technical-skills span.level.level-3::after{content: '60%';}
+/* ReactJS */
+section#skills .container .technical-skills span.level.level-4:before{width: 40%;}
+section#skills .container .technical-skills span.level.level-4::after{content: '40%';}
+/* Php & MySql */
+section#skills .container .technical-skills span.level.level-5:before{width: 70%;}
+section#skills .container .technical-skills span.level.level-5::after{content: '70%';}
+/* Microsoft Office */
+section#skills .container .technical-skills span.level.level-6:before{width: 80%;}
+section#skills .container .technical-skills span.level.level-6::after{content: '80%';}
+/* Adobe Photoshop / Figma */
+section#skills .container .technical-skills span.level.level-7:before{width: 80%;}
+section#skills .container .technical-skills span.level.level-7::after{content: '80%';}
 
 section#experience {
     padding-top: 20px;
@@ -158,6 +300,7 @@ body {
     letter-spacing: 1px;
     font-size: 15px;
     line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -186,7 +329,7 @@ div.title h2 {
 
 div.title h2:before {
     content: "";
-    height: 4px;
+    height: 1px;
     width: 70px;
     background: var(--tertiary);
     position: absolute;
@@ -224,31 +367,32 @@ section#about {
 
 main {
     position: relative;
-    left: 350px;
+    left: 260px;
     display: block;
-    width: calc(100% - 450px);
+    width: calc(100% - 320px);
+    overflow-x: hidden;
 }
 
 div.img {
     position: relative;
     width: 400px;
     height: 400px;
-    background: var(--dark);
+    background: #000000;
 }
 
 header div.img {
-    border: 10px solid var(--tertiary);
+    border: 1px solid var(--tertiary);
 }
 
 div.img:before {
     content: "";
     width: 80px;
     height: 80px;
-    background: var(--tertiary);
+    border: 1px solid var(--tertiary);
     position: absolute;
     right: 40px;
     top: -45px;
-    border: 10px solid #000000;
+    /* border: 10px solid #000000; */
     transform: rotate(45deg);
 }
 
@@ -293,7 +437,7 @@ div.img img {
 
 .btns a.btn {
     background: transparent;
-    border: 1px solid var(--light);
+    border: 1px solid #ffffff1a;
     padding: 15px 20px;
     font-size: 20px;
     letter-spacing: 4px;
@@ -366,11 +510,12 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--secondary);
+    background: #1d1d1d;
     padding: 2% 40px;
     align-items: center;
     position: fixed;
     height: 100%;
+    width: 200px;
 }
 
 div#particles-js {
@@ -414,7 +559,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 16px;
+    gap: 40px;
     letter-spacing: 1px;
 }
 
@@ -448,13 +593,22 @@ nav ul li a:hover:before {
 
 .social {
     display: flex;
-    gap: 20px;
+    gap: 5px;
+}
+
+section#contact .social {gap: 25px;}
+
+section#contact .social a {
+    border-color: #ffffff17;
+    width: 45px;
+    font-size: 20px;
+    height: 45px;
 }
 
 .social a {
     width: 30px;
     height: 30px;
-    border: 1px solid #f4ff0052;
+    border: 1px solid #f4ff0061;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,6 +650,7 @@ The juicy stuff
     -o-transition: 0.2s;
     transition: 0.2s;
     -webkit-tap-highlight-color: transparent;
+    font-size: 20px;
 }
 
 .controls ul li:hover,
@@ -523,7 +678,7 @@ The juicy stuff
 .item-grid .item {
     display: none;
     overflow: hidden;
-    background: var(--secondary);
+    background: #1d1d1d;
     position: relative;
 }
 
@@ -576,4 +731,4 @@ The juicy stuff
     .item-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} 
