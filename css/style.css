@@ -67,6 +67,9 @@ form input, form textarea {
     border: 1px solid #ffffff24;
     font-size: 20px;
     font-family: var(--font);
+    color: var(
+    --primary);
+    letter-spacing: 2px;
 }
 
 input.submit {
@@ -481,10 +484,10 @@ h1 span.subtitle {
 
 span.subtitle:nth-child(2) {
     color: var(--tertiary);
-    font-size: 32px;
+    font-size: 22px;
     text-transform: uppercase;
-    padding: 20px 0 60px;
-    letter-spacing: 2px;
+    padding: 25px 0 34px;
+    letter-spacing: 5px;
     font-weight: 100;
     font-family: var(--font);
 }
@@ -520,7 +523,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #1d1d1d;
+    background: #0e0e0e;
     padding: 2% 40px;
     align-items: center;
     position: fixed;
@@ -610,7 +613,7 @@ nav ul li a:hover:before {
 
 .social {
     display: flex;
-    gap: 5px;
+    gap: 8px;
 }
 
 section#contact .social {gap: 25px;}
@@ -623,9 +626,9 @@ section#contact .social a {
 }
 
 .social a {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #f4ff0061;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #c7c7c726;
     display: flex;
     justify-content: center;
     align-items: center;
