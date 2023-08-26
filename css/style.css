@@ -325,6 +325,11 @@ div.title h2 {
     line-height: 1;
     position: relative;
     font-size: 4rem;
+    -webkit-text-fill-color: var(--primary);
+    -webkit-text-stroke-color: var(--primary);
+    -webkit-text-stroke-width: thin;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 div.title h2:before {
@@ -350,7 +355,8 @@ div.title span {
     color: var(--tertiary);
     position: absolute;
     font-family: var(--font);
-    top: -20px;
+    top: -35px;
+    font-size: 20px;
 }
 
 .text-bloc {
@@ -469,18 +475,18 @@ div.img img {
 }
 
 h1 span.subtitle {
-    -webkit-text-stroke-color: var(--tertiary);
+    color: var(--tertiary);
     display: block;
 }
 
 span.subtitle:nth-child(2) {
-    -webkit-text-fill-color: var(--primary);
-    -webkit-text-stroke: aliceblue;
-    -webkit-text-stroke-color: #ffffff30;
-    -webkit-text-stroke-width: thin;
-    font-size: 2rem;
+    color: var(--tertiary);
+    font-size: 32px;
     text-transform: uppercase;
-    padding: 20px 0;
+    padding: 20px 0 60px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-family: var(--font);
 }
 
 .slogan {
@@ -491,11 +497,15 @@ span.subtitle:nth-child(2) {
 .slogan h1,
 h2 {
     font-size: 4rem;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: var(--light);
-    -webkit-text-stroke-width: thin;
+    /* -webkit-text-fill-color: transparent; */
+    /* -webkit-text-stroke-color: var(--light); */
+    /* -webkit-text-stroke-width: thin; */
     letter-spacing: 5px;
     font-family: var(--font);
+}
+
+.slogan h1 {
+    line-height: 1;
 }
 
 .count-particles {
@@ -541,6 +551,13 @@ section#header {
     display: flex;
     z-index: 9;
     position: relative;
+}
+
+section#header:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000000bd;
 }
 
 .banner {
