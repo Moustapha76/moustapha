@@ -30,7 +30,7 @@ footer {
     color: var(--primary);
     letter-spacing: 2px;
 }
-
+footer p{position: relative;display: contents;}
 section#education .item:hover p.description {
     color: var(--dark);
 }
@@ -360,6 +360,7 @@ div.title span {
     font-family: var(--font);
     top: -35px;
     font-size: 20px;
+    white-space: nowrap;
 }
 
 .text-bloc {
@@ -741,14 +742,39 @@ The juicy stuff
 
 /* Media Queries */
 
-@media (max-width: 768px) {
-    .item-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
 @media only screen and (min-width: 768.1px) and (max-width: 991px) {
     .item-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 } 
+@media (max-width: 768px) {
+    .item-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    div.img{display: none;}
+    .banner{left: 30%;}
+    section#about{grid-template-columns: 1fr;}
+    main{left: 220px;width: calc(100% - 240px);}
+    main section{padding: 10% 5%;}
+    section#education .container,section#experience .container,section#contact .container{flex-wrap: wrap;}
+    div.title h2{font-size: 3rem;}
+    section#skills .container,section#hobbies .container{grid-template-columns: 1fr;}
+    section#contact .container form,section#contact .container .infos{width: 100%;}
+}
+@media (max-width: 576px){
+    nav{display: none;}
+    .banner{left: 0px;width: 100%;padding: 10%;}
+    span.subtitle:nth-child(2){font-size: 16px;letter-spacing: 4px;padding: 12px 0;}
+    .slogan h1, h2{font-size: 40px;letter-spacing: 2px;}
+    .btns{flex-wrap: wrap;}
+    .btns a.btn{width: 100%;text-align: center;}
+    .slogan h1{text-align: center;}
+    header{height: 70vh;}
+    main {
+        left: 0;
+        width: 100%;
+    }
+    div.title h2 {
+        font-size: 25px;
+    }
+}
